@@ -1,0 +1,109 @@
+.container1
+{
+	min-height:calc( 100vh - 150px );
+	min-width: 250px;
+	border-radius: 10px;
+	border:1px solid #aaa;
+	padding:5px;
+}
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+    height: 0%;
+    width: 100%;
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 5%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 0px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+}
+
+.lockscreen-logo {
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 300;
+}
+.lockscreen-name {
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 5px;
+  font-weight: 300;
+}
+.lockscreen-logo a {
+  color: #444;
+}
+.lockscreen-wrapper {
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 10%;
+}
+
+/* Will contain the image and the sign in form */
+.lockscreen-item {
+  border-radius: 4px;
+  padding: 0;
+  background: #fff;
+  position: relative;
+  margin: 0px auto 30px auto;
+  width: 290px;
+}
+/* User image */
+.lockscreen-image {
+  border-radius: 50%;
+  position: absolute;
+  left: -10px;
+  top: -25px;
+  background: #fff;
+  padding: 5px;
+  z-index: 10;
+}
+.lockscreen-image > img {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+}
+/* Contains the password input and the login button */
+.lockscreen-credentials {
+  margin-left: 70px;
+}
+.lockscreen-credentials .form-control {
+  border: 0;
+}
+.lockscreen-credentials .btn {
+  background-color: #fff;
+  border: 0;
+  padding: 0 10px;
+}
